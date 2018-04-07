@@ -5,10 +5,27 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ title }} - Project 2</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" sizes="192x192" href="https://material.io/static/images/simple-lp/favicons/components-192x192.png">
+    <link rel="shortcut icon" href="https://material.io/static/images/simple-lp/favicons/components-72x72.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="{{root}}assets/app.css">
 </head>
 
-<body>
-    {{> body}}
-</body>
+<body class="mdc-typography">
+    {{> header}} {{> body}} {{> footer}}
+  
+    <script src="{{root}}assets/material-components-web.js"></script>
+    <script src="{{root}}assets/app.js"></script>
+    <script>
+      mdc.autoInit();
+    //   document.getElementById('shrine-nav-icon').addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     document.getElementById('shrine-nav-menu').MDCTemporaryDrawer.open = true;
+    //   });
+    </script>
+  </body>
 
 </html>
