@@ -1,5 +1,21 @@
-$primary-color: red;
+@import 'colors';
 
-body {
-  background: $primary-color;
+$mdc-theme-primary: $proj-color-midnightblue;
+$mdc-theme-secondary:$proj-color-crimson;
+$mdc-theme-background: $proj-color-slategrey;
+
+// Import as needed approach
+// @import '@material/button/mdc-button';
+// @import '@material/top-app-bar/mdc-top-app-bar';
+
+// Import entire library approach
+@import 'material-components-web/material-components-web';
+
+.mdc-button--secondary {
+  // @include mdc-button-container-fill-color($mdc-theme-secondary); // Sets the container color to the given color.
+  // @include mdc-button-icon-color($color); // Sets the icon color to the given color.
+  @include mdc-button-ink-color($mdc-theme-secondary); // Sets the ink color to the given color. This affects both text and icon, unless `mdc-button-icon-color` is also used.
+  // @include mdc-button-stroke-color($mdc-theme-secondary); // Sets the stroke color to the given color.
+  // @include mdc-button-filled-accessible($mdc-theme-secondary);
+  @include mdc-states-base-color($mdc-theme-secondary);
 }

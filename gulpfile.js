@@ -5,19 +5,12 @@ var browser = require('browser-sync');
 
 gulp.task('styles', function () {
     return gulp.src('src/styles/app.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({includePaths: './node_modules/'}).on('error', sass.logError))
         .pipe(gulp.dest('dist/assets/'));
 });
 
 gulp.task('scripts', function () {
     return gulp.src('src/scripts/app.js')
-        .pipe(gulp.dest('dist/assets'));
-});
-
-gulp.task('styles-vendor', function () {
-    return gulp.src('node_modules/material-components-web/material-components-web.scss')
-        .pipe(sass({ includePaths: './node_modules/' }))
-        .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('dist/assets'));
 });
 
@@ -30,7 +23,6 @@ gulp.task('build', gulp.parallel(
     pages,
     'styles',
     'scripts',
-    'styles-vendor',
     'scripts-vendor'
 ));
 
