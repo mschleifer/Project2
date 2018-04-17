@@ -11,6 +11,11 @@ $mdc-theme-background: $proj-color-slategrey;
 // Import entire library approach
 @import 'material-components-web/material-components-web';
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .mdc-button--secondary {
   // @include mdc-button-container-fill-color($mdc-theme-secondary); // Sets the container color to the given color.
   // @include mdc-button-icon-color($color); // Sets the icon color to the given color.
@@ -24,8 +29,17 @@ $mdc-theme-background: $proj-color-slategrey;
   height: 48px;
 }
 
+#proj-logo {
+  font-family: Roboto Mono;
+}
+
+#proj2-content {
+  padding: 0;
+}
+
 .header-nav {
   display: flex;
+  font-family: Roboto Mono;
 }
 
 .header-nav__link{
@@ -34,6 +48,12 @@ $mdc-theme-background: $proj-color-slategrey;
   height: 100%;
   display: flex;
   align-items: center;
+  padding: 0 14px;
+}
+
+.header-nav__link--active{
+  color: $mdc-theme-secondary;
+  border-bottom: 2px solid $mdc-theme-secondary;
 }
 
 // temporary

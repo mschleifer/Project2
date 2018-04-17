@@ -19,11 +19,17 @@ gulp.task('scripts-vendor', function () {
         .pipe(gulp.dest('dist/assets'));
 });
 
+gulp.task('images', function () {
+    return gulp.src('src/images/*.jpg')
+        .pipe(gulp.dest('dist/assets/images'));
+});
+
 gulp.task('build', gulp.parallel(
     pages,
     'styles',
     'scripts',
-    'scripts-vendor'
+    'scripts-vendor',
+    'images'
 ));
 
 gulp.task('default', gulp.series('build', server));
