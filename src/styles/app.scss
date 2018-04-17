@@ -33,10 +33,6 @@ body {
   font-family: Roboto Mono;
 }
 
-#proj2-content {
-  padding: 0;
-}
-
 .header-nav {
   display: flex;
   font-family: Roboto Mono;
@@ -54,6 +50,24 @@ body {
 .header-nav__link--active{
   color: $mdc-theme-secondary;
   border-bottom: 2px solid $mdc-theme-secondary;
+}
+
+#proj2-content {
+  padding: 0;
+}
+
+.image-crop-wrapper {
+  max-height: 380px;
+  overflow: hidden;
+}
+
+.image--full {
+  max-width: 100%;
+  transform: translate3d(0px, -25%, 0px);
+}
+
+.main-content__section {
+  padding: var(--mdc-layout-grid-margin-desktop, 24px);
 }
 
 // temporary
