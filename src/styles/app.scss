@@ -3,6 +3,7 @@
 $mdc-theme-primary: $proj-color-midnightblue;
 $mdc-theme-secondary:$proj-color-crimson;
 $mdc-theme-background: $proj-color-slategrey;
+$proj2-theme-background-section: #eeeeee;
 
 // Import as needed approach
 // @import '@material/button/mdc-button';
@@ -71,10 +72,14 @@ body {
 }
 
 .main-content__section {
-  padding: var(--mdc-layout-grid-margin-desktop, 24px);
+   background: $proj2-theme-background-section;
+}
+
+.footer {
+  background: $mdc-theme-background;
 }
 
 // temporary
 body {
-  background-color:#dddddd; 
+  background-color:$mdc-theme-background; 
 }

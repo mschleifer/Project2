@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "tbd"
+    "url": "https://github.com/mschleifer/Project2.git"
   },
   "author": "Matthew Schleifer",
   "license": "ISC",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "gulp": "^4.0.0",
-    "gulp-sass": "^4.0.0",
+    "gulp-sass": "^4.0.1",
     "panini": "^1.6.2"
   }
 }
