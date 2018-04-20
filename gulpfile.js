@@ -20,7 +20,7 @@ gulp.task('scripts-vendor', function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('src/images/*.jpg')
+    return gulp.src('src/images/*.*')
         .pipe(gulp.dest('dist/assets/images'));
 });
 
